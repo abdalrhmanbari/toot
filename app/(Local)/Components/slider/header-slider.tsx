@@ -9,6 +9,7 @@ import business from  "../../Assets/Images/shop_8123143 1.png"
 import logo from "../../Assets/Images/Rectangle_1_xA0_Image.png"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Magic from '../../Assets/Icon/magic-icon'
+import Link from 'next/link'
 export default function HeaderSlider() {
   return (
     <header  className=' flex gap-4'>
@@ -21,13 +22,14 @@ export default function HeaderSlider() {
         <div className=' flex gap-8 '>
 
     <SwiperSlide>
-<div className=' w-[4.6875rem] h-[4.375rem] border-2 border-primary   rounded-[0.375rem] flex flex-col justify-center items-center  shadow-boxShadow shadow-black/25 '>
+<Link href={"/"} className=' w-[4.6875rem] h-[4.375rem] border-2 border-primary   rounded-[0.375rem] flex flex-col justify-center items-center  shadow-boxShadow shadow-black/25 '>
+  
   <div className=' relative'>
   <Image src={logo} alt='..' className=' h-auto  object-cover ' quality={100}   />
   <Image src={T} alt='..' className=' h-auto  object-cover absolute  top-1/4 left-1/3 -translate-x-1/4  ' quality={100}   />
   </div>
   <h1 className=' text-primary text-[0.875rem] font-bold pt-[0.3rem] '>toot</h1>
-    </div>
+    </Link>
     </SwiperSlide>
     <SwiperSlide>
 <div className=' w-[4.6875rem] h-[4.375rem] rounded-[0.375rem] border  border-white-secondary  flex flex-col justify-center  items-center shadow-boxShadow shadow-black/25 '>
@@ -40,24 +42,25 @@ export default function HeaderSlider() {
     </div>
     </SwiperSlide>
     <SwiperSlide>
-<div className=' w-[4.6875rem] h-[4.375rem] rounded-[0.375rem] border border-white-secondary flex flex-col justify-center items-center shadow-boxShadow shadow-black/25 gap-[0.31rem]'>
+<Link href={"/categories"} className=' w-[4.6875rem] h-[4.375rem] rounded-[0.375rem] border border-white-secondary flex flex-col justify-center items-center shadow-boxShadow shadow-black/25 gap-[0.31rem]'>
       
 <Image src={business} alt='..'    className='w-[1.9375rem] object-cover h-auto ' quality={100} />
       <h1 className=' text-[#D20041] font-bold text-[0.75rem]'>Stores</h1>
-</div>
+</Link>
 </SwiperSlide>
+<SwiperSlide>
+            <Link href={"/deals"} className=' w-[4.6875rem] h-[4.375rem]'>
+            <Magic/>
+            </Link>
+          
+            </SwiperSlide>
 <SwiperSlide>
             <div className=' w-[4.6875rem] h-[4.375rem] rounded-[0.375rem] border border-white-secondary  flex flex-col justify-center items-center gap-[0.31rem]  shadow-boxShadow shadow-black/25'>
 <Image src={shop} alt='..'  className='w-[1.9375rem] h-auto object-cover' quality={100} />
             <h1 className=' text-[#003960] font-bold text-[0.75rem]'>Pay</h1>
         </div>
         </SwiperSlide>
-        <SwiperSlide>
-            <div className=' w-[4.6875rem] h-[4.375rem]'>
-            <Magic/>
-            </div>
-          
-            </SwiperSlide>
+
         </div>
           
             </Swiper>
